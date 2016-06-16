@@ -99,17 +99,18 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
-                    <h1>@yield('action')</h1>
-                <!-- /.col-lg-12 -->
-                @yield('content')
-                </div>
-            </div>
-            <div class="col-md-12">
                 @if(Session::has('flash_message'))
                     <div class="alert alert-success">
                         {!! Session::get('flash_message') !!}
                     </div>
                 @endif
+                </div>
+                <div class="col-md-8 col-md-offset-2">
+                    <h1>@yield('action')</h1>
+                <!-- /.col-lg-12 -->
+                @yield('content')
+                </div>
+            
             </div>
             <!-- /.row -->
         </div>

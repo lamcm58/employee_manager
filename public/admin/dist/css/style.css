@@ -439,3 +439,7 @@ li a {
         background-color: #2e8ece !important;
     }
 }
+
+#dataTable_filter input {
+    max-width: 200px;
+}

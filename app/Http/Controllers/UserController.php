@@ -31,7 +31,7 @@ class UserController extends Controller {
 		if(!Auth::user()->resetpass){
 			return view("admin.user.reset");
 		}
-		$confirm_code = str_random(ư30);
+		$confirm_code = str_random(30);
 		Mail::send('emails.verify', array('firstname'=> $request->txtUser, 'confirm_code' => $confirm_code, 'password' => $request->txtPass), function($message){
         	$message->to(Input::get('txtEmail'), Input::get('txtUser'))->subject('Active your account');
     	});
@@ -98,5 +98,9 @@ class UserController extends Controller {
 		$user->save();
 		Auth::loginUsingId($user->id);
 		return view("admin.user.reset");
+	}
+
+	public function error(){
+		return view('report');
 	}
 }

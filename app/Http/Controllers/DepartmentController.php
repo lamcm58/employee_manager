@@ -79,7 +79,7 @@ class DepartmentController extends Controller {
 		if(!Auth::user()->resetpass){
 			return view("admin.user.reset");
 		}
-		$data = Employee::select('id','name','job_title','email')->where('depart_id','=',$id)->get()->toArray();
+		$data = Employee::select('id','name','job_title','email','image')->where('depart_id','=',$id)->get()->toArray();
 		return view('admin.department.view',compact('data'));
 	}
 }

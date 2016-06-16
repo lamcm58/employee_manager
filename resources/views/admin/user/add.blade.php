@@ -24,7 +24,7 @@
                 <input type="email" class="form-control" name="txtEmail" placeholder="Please Enter Email" value="{!! old('txtEmail') !!}"/>
                 <?php error($errors,'txtEmail')?>
             </div>
-            <button type="submit" class="btn btn-primary">User Add</button>
+            <button type="submit" class="btn btn-primary">Add</button>
             <button type="reset" class="btn btn-default">Reset</button>
             </form>
     </div>

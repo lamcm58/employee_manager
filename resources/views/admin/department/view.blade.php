@@ -5,9 +5,9 @@
         <thead>
         <tr align="center">
             <th>STT</th>
-            <th>Name</th>
             <th>Image</th>
-            <th>Job title</th>
+            <th>Name</th>
+            <th>Email</th>
         </tr>
         </thead>
         <tbody>
@@ -15,8 +15,8 @@
         @foreach($data as $item )
             <tr class="odd gradeX" align="center">
                 <td>{!! $stt ++!!}</td>
+                <td><img src="{!! asset('resources/uploads/'.$item['image']) !!}" height="50px" width="50px" /></td>
                 <td>{!! $item['name'] !!}</td>
-                <td>{!! $item['job_title'] !!}</td>
                 <td>{!! $item['email'] !!}</td>
             </tr>
         @endforeach

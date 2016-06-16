@@ -39,7 +39,7 @@
                 </select>
                 <?php error($errors,'txtDepartment')?>
             </div>
-            <button type="submit" class="btn btn-primary">Product Add</button>
+            <button type="submit" class="btn btn-primary">Add</button>
             <button type="reset" class="btn btn-default">Reset</button>
             </form>
     </div>

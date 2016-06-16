@@ -23,7 +23,7 @@
             <input type="email" class="form-control" name="txtEmail" value="{!! old('txtEmail',isset($data) ? $data['email'] : null) !!}" placeholder="Please Enter Email" disabled />
             <?php error($errors,'txtEmail')?>
         </div>
-        <button type="submit" class="btn btn-primary">User Edit</button>
+        <button type="submit" class="btn btn-primary">Edit</button>
         <button type="reset" class="btn btn-default">Reset</button>
     </form>
 @endsection

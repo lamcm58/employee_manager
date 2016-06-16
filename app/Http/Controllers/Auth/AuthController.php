@@ -5,6 +5,7 @@ use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Contracts\Auth\Registrar;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 use App\Http\Requests\LoginRequest;
+use App\User;
 
 class AuthController extends Controller {
 
@@ -45,6 +46,8 @@ class AuthController extends Controller {
 			'username' => $request->txtUser,
 			'password' => $request->txtPass
 		);
+		$user = User::where("username", $request->txtUser)->get()[0];
+		if(!$user->active) return redirect('report');
 		if($this->auth->attempt($login)) {
 			return redirect()->route('admin.department.list');
 		} else {

@@ -12,6 +12,7 @@
 Route::get('/', 'WelcomeController@index');
 Route::get('home', 'HomeController@index');
 Route::get('verify/{confirm_code}', 'UserController@verify');
+Route::get('report', 'UserController@error');
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
